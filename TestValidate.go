@@ -2,23 +2,15 @@ package mymain
 
 import (
 	"fmt"
-	
-	"gopkg.in/go-playground/validator.v9"
+
+	"github.com/dongri/phonenumber"
 )
 
-type User struct {
-	Email string `json:"email" validate:"required,email"`
-	Name string `json:"name" validate:"required"`
-}
-
-func mmain() {
-	v := validator.New()
-	a := User{
-		Email: "a",
-	}
-	err := v.Struct(a)
-
-	for _, e := range err.(validator.ValidationErrors) {
-		fmt.Println(e)
-	}
+func mymain() {
+	// Get country with mobile and land line numbers
+// Let's try to get country for Latvian land line number
+includeLandLine := true
+country := phonenumber.GetISO3166ByNumber("081367092298", includeLandLine)
+fmt.Println(country.CountryName)
+// Output: Latvia
 }
