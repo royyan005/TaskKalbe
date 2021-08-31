@@ -1,19 +1,19 @@
 package mymain
 
 import (
-	"fmt"
+	// "fmt"
 	"regexp"
 	"strings"
 )
 
-func main() {
-	fmt.Println(PhoneIsValid("081367092298"))
-	fmt.Println(PhoneIsValid("6281367092298"))
-	fmt.Println(PhoneIsValid("+6281367092298"))
-	fmt.Println(PhoneIsValid("08136709229800000"))
-	fmt.Println(PhoneIsValid("081367asdaaw"))
-	fmt.Println(PhoneIsValid("08136"))
-}
+// func main() {
+// 	fmt.Println(PhoneIsValid("081367092298"))
+// 	fmt.Println(PhoneIsValid("6281367092298"))
+// 	fmt.Println(PhoneIsValid("+6281367092298"))
+// 	fmt.Println(PhoneIsValid("08136709229800000"))
+// 	fmt.Println(PhoneIsValid("081367asdaaw"))
+// 	fmt.Println(PhoneIsValid("08136"))
+// }
 
 var Email string
 var PhoneNumber string

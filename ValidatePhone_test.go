@@ -22,5 +22,11 @@ func TestPhoneIsValid(t *testing.T) {
 
 	var num4 = PhoneIsValid("08136709229800000") // lebih dari 16 digit
 	assert.Equal(t, num4, "ERROR!", "phone not equal")
+
+	var num5 = PhoneIsValid("081367") // kurang dari 11 digit
+	assert.Equal(t, num5, "ERROR!", "phone not equal")
+
+	var num6 = PhoneIsValid("08136asdasdad") // menggunakan huruf
+	assert.Equal(t, num6, "ERROR!", "phone not equal")
 }
 
