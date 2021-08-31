@@ -1,21 +1,22 @@
-// package main
+package mymain
 
-// import (
-// 	// "fmt"
-// 	// "regexp"
-// )
+import (
+	"fmt"
+	"regexp"
+)
 
-// func main() {
+func main() {
+	fmt.Println(PhoneIsValid("081367092298"))
+}
 
-// }
+	var Email string
+	var PhoneNumber  string
 
-// type User struct {
-// 	Email string
-// 	PhoneNumber  string
-// }
 
-// func PhoneIsValid(a User) string {
-
-// 	return a.PhoneNumber
-
-// }
+func PhoneIsValid(PhoneNumber string) string {
+	re := regexp.MustCompile(`^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$`)
+	if re.MatchString(PhoneNumber) {
+		return PhoneNumber
+	}
+	return PhoneNumber
+}

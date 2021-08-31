@@ -1,4 +1,4 @@
-package main
+package mymain
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ type User struct {
 	Name string `json:"name" validate:"required"`
 }
 
-func main() {
+func mmain() {
 	v := validator.New()
 	a := User{
 		Email: "a",

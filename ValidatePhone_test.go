@@ -1,11 +1,17 @@
-// package main
+package mymain
 
-// import (
-// 	"github.com/stretchr/testify/assert"
-// 	"testing"
-// )
+import (
+	"testing"
 
-// func TestPhoneIsValid(t *testing.T) {
-// 	assert.Equal(1, PhoneIsValid("081367092298"), "phone equal")
-// }
+	"github.com/stretchr/testify/assert"
+)
+
+
+
+var truephone string = PhoneIsValid("081367092298")
+
+func TestPhoneIsValid(t *testing.T) {
+	var num = PhoneIsValid("081367092298")
+	assert.Equal(t, num, truephone, "phone equal")
+}
 
