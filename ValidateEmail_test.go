@@ -6,12 +6,6 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-
-
-var (
-	truemail bool = true
-)
-
 func TestIsEmailValid(t *testing.T) {
 	testemail1 := isEmailValid("test44@gmail.com")
 	assert.Equal(t, testemail1, true, "Wrong Email Format!")
